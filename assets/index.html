@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fresh Flower Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .spin { animation: spin 3s linear infinite; }
+    @media (max-width: 768px) { .trusted-badge { display: none; } }
+  </style>
+</head>
+<body class="font-sans">
+
+<!-- Navbar -->
+<nav class="flex justify-between items-center p-4 shadow-md">
+  <div><img src="assets/logo.png" alt="Logo" class="h-10" /></div>
+  <div class="hidden md:flex gap-6 items-center">
+    <a href="#" class="hover:text-pink-600">Home</a>
+    <a href="#" class="hover:text-pink-600">Our Flowers</a>
+    <a href="#" class="hover:text-pink-600">Why Us?</a>
+    <a href="#" class="hover:text-pink-600">Contact</a>
+    <span class="flex items-center gap-2"><img src="assets/icon-cart.png" class="h-6" /> Cart</span>
+  </div>
+  <div class="flex md:hidden items-center gap-2">
+    <span>Cart</span>
+    <img src="assets/icon-cart.png" alt="Cart" class="h-6" />
+  </div>
+</nav>

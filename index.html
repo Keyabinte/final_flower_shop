@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flower Shop</title>
+    <script>
+      function addToCart() {
+        alert("Flower Added to Cart");
+      }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .spin {
+        animation: spin 3s linear infinite;
+      }
+      @media (max-width: 768px) {
+        .trusted-badge {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body class="font-sans">
+    <nav class="flex justify-between items-center p-4 shadow-md">
+      <div><img src="assets/logo.png" alt="Logo" class="h-10" /></div>
+      <div class="hidden md:flex gap-6 items-center">
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <img src="assets/icon-cart.png" alt="Cart" class="h-6" />
+      </div>
+      <div class="flex md:hidden items-center gap-2">
+        <span>Cart</span>
+        <img src="assets/icon-cart.png" alt="Cart" class="h-6" />
+      </div>
+    </nav>
+    <section class="flex flex-col-reverse md:flex-row items-center px-6 py-12 gap-10">
+      <div class="md:w-1/2 text-left">
+        <h1 class="text-4xl font-bold mb-4">Beautiful Flowers for Every Occasion</h1>
+        <p class="text-lg">Bring colors to your life with our fresh collection.</p>
+      </div>
+      <div class="md:w-1/2">
+        <img src="assets/hero-flower.png" alt="Hero Flower" class="w-full" />
+      </div>
+    </section>
+    <section class="text-center py-12">
+      <h2 class="text-3xl font-bold mb-2">Our Flowers</h2>
+      <p class="mb-6 text-gray-600">Find your favorite blooms</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 px-6">
+        <div class="border rounded-lg p-4">
+          <img src="assets/sample-flower-image.png" alt="Flower" class="mb-2" />
+          <h3 class="font-semibold">Rose</h3>
+          <p>$15</p>
+          <button onclick="addToCart()" class="mt-2 bg-green-600 text-white px-4 py-1 rounded">Add to Cart</button>
+        </div>
+        <div class="border rounded-lg p-4">
+          <img src="assets/sample-flower-image.png" alt="Flower" class="mb-2" />
+          <h3 class="font-semibold">Tulip</h3>
+          <p>$18</p>
+          <button onclick="addToCart()" class="mt-2 bg-green-600 text-white px-4 py-1 rounded">Add to Cart</button>
+        </div>
+        <div class="border rounded-lg p-4">
+          <img src="assets/sample-flower-image.png" alt="Flower" class="mb-2" />
+          <h3 class="font-semibold">Lily</h3>
+          <p>$12</p>
+          <button onclick="addToCart()" class="mt-2 bg-green-600 text-white px-4 py-1 rounded">Add to Cart</button>
+        </div>
+        <div class="border rounded-lg p-4">
+          <img src="assets/sample-flower-image.png" alt="Flower" class="mb-2" />
+          <h3 class="font-semibold">Orchid</h3>
+          <p>$20</p>
+          <button onclick="addToCart()" class="mt-2 bg-green-600 text-white px-4 py-1 rounded">Add to Cart</button>
+        </div>
+        <div class="border rounded-lg p-4">
+          <img src="assets/sample-flower-image.png" alt="Flower" class="mb-2" />
+          <h3 class="font-semibold">Daisy</h3>
+          <p>$10</p>
+          <button onclick="addToCart()" class="mt-2 bg-green-600 text-white px-4 py-1 rounded">Add to Cart</button>
+        </div>
+        <div class="border rounded-lg p-4">
+          <img src="assets/sample-flower-image.png" alt="Flower" class="mb-2" />
+          <h3 class="font-semibold">Sunflower</h3>
+          <p>$8</p>
+          <button onclick="addToCart()" class="mt-2 bg-green-600 text-white px-4 py-1 rounded">Add to Cart</button>
+        </div>
+        <div class="border rounded-lg p-4">
+          <img src="assets/sample-flower-image.png" alt="Flower" class="mb-2" />
+          <h3 class="font-semibold">Lavender</h3>
+          <p>$14</p>
+          <button onclick="addToCart()" class="mt-2 bg-green-600 text-white px-4 py-1 rounded">Add to Cart</button>
+        </div>
+        <div class="border rounded-lg p-4">
+          <img src="assets/sample-flower-image.png" alt="Flower" class="mb-2" />
+          <h3 class="font-semibold">Peony</h3>
+          <p>$16</p>
+          <button onclick="addToCart()" class="mt-2 bg-green-600 text-white px-4 py-1 rounded">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+    <section class="flex flex-col md:flex-row items-center px-6 py-12 gap-10 relative">
+      <div class="md:w-1/2">
+        <img src="assets/flower-store.png" alt="Lover" class="w-full" />
+        <img src="assets/trusted-badge.png" alt="Trusted" class="trusted-badge absolute top-4 left-4 h-12 spin" />
+      </div>
+      <div class="md:w-1/2 text-left">
+        <h2 class="text-3xl font-bold mb-4">Why Plant Lovers Trust Us</h2>
+        <ul class="list-disc ml-6">
+          <li>Fresh and vibrant flowers</li>
+          <li>Reliable delivery</li>
+          <li>Customer satisfaction</li>
+        </ul>
+      </div>
+    </section>
+    <section class="text-white py-16 px-6 bg-cover bg-center" style="background-image: url('assets/news-letter-bg.png')">
+      <h2 class="text-3xl font-bold text-center mb-4">Join the Colorful Bunch</h2>
+      <div class="flex justify-center gap-2 max-w-xl mx-auto">
+        <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-2 rounded text-black" />
+        <button class="bg-pink-600 px-6 py-2 rounded">Subscribe</button>
+      </div>
+    </section>
+    <section class="py-12 px-6">
+      <h2 class="text-3xl font-bold text-center mb-2">Latest Deals</h2>
+      <p class="text-center text-gray-600 mb-6">Don't miss out on our best offers</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <img src="assets/deal-ana.png" alt="Deal" class="w-full rounded" />
+        <img src="assets/deal-bloom.png" alt="Deal" class="w-full rounded" />
+        <img src="assets/deal-zabo.png" alt="Deal" class="w-full rounded" />
+      </div>
+    </section>
+    <footer class="bg-gray-100 py-8 px-6 flex flex-col md:flex-row justify-between items-center">
+      <img src="assets/logo.png" alt="Logo" class="h-10 mb-4 md:mb-0" />
+      <div class="flex gap-6">
+        <a href="#">Home</a>
+        <a href="#">Features</a>
+        <a href="#">Contact</a>
+      </div>
+    </footer>
+  </body>
+</html>
