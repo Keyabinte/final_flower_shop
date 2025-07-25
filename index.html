@@ -4,30 +4,47 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fresh Flower Shop</title>
+
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Internal CSS -->
   <style>
     .spin { animation: spin 3s linear infinite; }
-    @media (max-width: 768px) { .trusted-badge { display: none; } }
+    @keyframes spin { from { transform: rotate(0deg);} to { transform: rotate(360deg);} }
+    @media (max-width: 768px) {
+      .trusted-badge { display: none; }
+    }
   </style>
+
+  <!-- JavaScript -->
+  <script>
+    function addToCart() {
+      alert("Yay! Flower added to your cart 🌼");
+    }
+  </script>
 </head>
 <body class="font-sans">
 
-<!-- Navbar -->
-<nav class="flex justify-between items-center p-4 shadow-md">
+<!-- ✅ Navbar -->
+<nav class="flex justify-between items-center p-4 shadow-md bg-white">
   <div><img src="assets/logo.png" alt="Logo" class="h-10" /></div>
   <div class="hidden md:flex gap-6 items-center">
     <a href="#" class="hover:text-pink-600">Home</a>
     <a href="#" class="hover:text-pink-600">Our Flowers</a>
     <a href="#" class="hover:text-pink-600">Why Us?</a>
     <a href="#" class="hover:text-pink-600">Contact</a>
-    <span class="flex items-center gap-2"><img src="assets/icon-cart.png" class="h-6" /> Cart</span>
+    <span class="flex items-center gap-2">
+      <img src="assets/icon-cart.png" class="h-6" /> Cart
+    </span>
   </div>
   <div class="flex md:hidden items-center gap-2">
     <span>Cart</span>
     <img src="assets/icon-cart.png" alt="Cart" class="h-6" />
   </div>
 </nav>
-<!-- Banner -->
+
+<!-- ✅ Banner -->
 <section class="flex flex-col-reverse md:flex-row items-center px-6 py-12 gap-10">
   <div class="md:w-1/2 text-left">
     <h1 class="text-4xl font-bold mb-4">Fresh Flowers, Fresh Mood 🌸</h1>
@@ -38,32 +55,68 @@
     <img src="assets/hero-flower.png" alt="Hero Flower" class="w-full" />
   </div>
 </section>
-<!-- Flowers Section -->
+
+<!-- ✅ Flowers Section -->
 <section class="text-center py-12">
-  <h2 class="text-3xl font-bold mb-2">Pick Your Favorite</h2>
+  <h2 class="text-3xl font-bold mb-2">Pick Your Favorite 🌸</h2>
   <p class="mb-6 text-gray-600">Fresh from the garden, just for you!</p>
+  
   <div class="grid grid-cols-2 md:grid-cols-4 gap-6 px-6">
+    <!-- Row 1 -->
     <div class="border rounded-lg p-4">
-      <img src="assets/sample-flower-image.png" alt="Flower" class="mb-2" />
+      <img src="assets/sample-flower-image.png" alt="Lovely Rose" class="mb-2" />
       <h3 class="font-semibold">Lovely Rose</h3>
       <p>$15</p>
       <button onclick="addToCart()" class="mt-2 bg-green-600 text-white px-4 py-1 rounded">Add to Cart</button>
     </div>
     <div class="border rounded-lg p-4">
-      <img src="assets/sample-flower-image.png" alt="Flower" class="mb-2" />
+      <img src="assets/sample-flower-image.png" alt="Sunny Tulip" class="mb-2" />
       <h3 class="font-semibold">Sunny Tulip</h3>
       <p>$18</p>
       <button onclick="addToCart()" class="mt-2 bg-green-600 text-white px-4 py-1 rounded">Add to Cart</button>
     </div>
-    <!-- Add other flowers similarly -->
+    <div class="border rounded-lg p-4">
+      <img src="assets/sample-flower-image.png" alt="Charming Lily" class="mb-2" />
+      <h3 class="font-semibold">Charming Lily</h3>
+      <p>$12</p>
+      <button onclick="addToCart()" class="mt-2 bg-green-600 text-white px-4 py-1 rounded">Add to Cart</button>
+    </div>
+    <div class="border rounded-lg p-4">
+      <img src="assets/sample-flower-image.png" alt="Orchid Bliss" class="mb-2" />
+      <h3 class="font-semibold">Orchid Bliss</h3>
+      <p>$20</p>
+      <button onclick="addToCart()" class="mt-2 bg-green-600 text-white px-4 py-1 rounded">Add to Cart</button>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="border rounded-lg p-4">
+      <img src="assets/sample-flower-image.png" alt="Sweet Daisy" class="mb-2" />
+      <h3 class="font-semibold">Sweet Daisy</h3>
+      <p>$10</p>
+      <button onclick="addToCart()" class="mt-2 bg-green-600 text-white px-4 py-1 rounded">Add to Cart</button>
+    </div>
+    <div class="border rounded-lg p-4">
+      <img src="assets/sample-flower-image.png" alt="Sunflower Joy" class="mb-2" />
+      <h3 class="font-semibold">Sunflower Joy</h3>
+      <p>$8</p>
+      <button onclick="addToCart()" class="mt-2 bg-green-600 text-white px-4 py-1 rounded">Add to Cart</button>
+    </div>
+    <div class="border rounded-lg p-4">
+      <img src="assets/sample-flower-image.png" alt="Lavender Dream" class="mb-2" />
+      <h3 class="font-semibold">Lavender Dream</h3>
+      <p>$14</p>
+      <button onclick="addToCart()" class="mt-2 bg-green-600 text-white px-4 py-1 rounded">Add to Cart</button>
+    </div>
+    <div class="border rounded-lg p-4">
+      <img src="assets/sample-flower-image.png" alt="Peony Bliss" class="mb-2" />
+      <h3 class="font-semibold">Peony Bliss</h3>
+      <p>$16</p>
+      <button onclick="addToCart()" class="mt-2 bg-green-600 text-white px-4 py-1 rounded">Add to Cart</button>
+    </div>
   </div>
 </section>
-<script>
-  function addToCart() {
-    alert("Yay! Flower added to your cart 🌼");
-  }
-</script>
-<!-- Plant Lover Section -->
+
+<!-- ✅ Plant Lover Section -->
 <section class="flex flex-col md:flex-row items-center px-6 py-12 gap-10 relative">
   <div class="md:w-1/2">
     <img src="assets/flower-store.png" alt="Lover" class="w-full" />
@@ -78,7 +131,8 @@
     </ul>
   </div>
 </section>
-<!-- Join Section -->
+
+<!-- ✅ Join Section -->
 <section class="text-white py-16 px-6 bg-cover bg-center" style="background-image: url('assets/news-letter-bg.png')">
   <h2 class="text-3xl font-bold text-center mb-4">Stay in Bloom with Us 🌸</h2>
   <div class="flex justify-center gap-2 max-w-xl mx-auto">
@@ -87,7 +141,7 @@
   </div>
 </section>
 
-<!-- Latest Deal Section -->
+<!-- ✅ Latest Deals -->
 <section class="py-12 px-6">
   <h2 class="text-3xl font-bold text-center mb-2">Hot Deals for You 🔥</h2>
   <p class="text-center text-gray-600 mb-6">Snag these beauties before they’re gone!</p>
@@ -98,7 +152,7 @@
   </div>
 </section>
 
-<!-- Footer -->
+<!-- ✅ Footer -->
 <footer class="bg-gray-100 py-8 px-6 flex flex-col md:flex-row justify-between items-center">
   <img src="assets/logo.png" alt="Logo" class="h-10 mb-4 md:mb-0" />
   <div class="flex gap-6">
